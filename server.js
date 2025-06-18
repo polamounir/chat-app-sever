@@ -38,7 +38,9 @@ app.use("/uploads", express.static("uploads"));
 
 // Routes
 app.use("/api", router);
-
+app.get("/api/test", (req, res) => {
+  res.send("Test route is working!");
+});
 // Error handling middleware
 
 app.use((err, req, res, next) => {
